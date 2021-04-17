@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cargar Medico</title>
+</head>
+<body>
+	<wicket:extend>
+		<form wicket:id="form">
+			<fieldset>
+				<legend>
+					<h1>Medico</h1>
+				</legend>
+				<p>
+					Documento: <input type="text" wicket:id="documento" required class="form-control" /><br> 
+					Nombre: <input type="text" wicket:id="nombre" required class="form-control" /><br>
+					Apellido: <input type="text" wicket:id="apellido" required class="form-control" /><br> 
+					Numero Matricula: <input type="text" wicket:id="NumeroMatricula" required class="form-control" /><br>
+					Especialidad: <span wicket:id="especialidad" required class="form-control"></span><br>
+				</p>
+				<button class="btn btn-success">
+					<i class="glyphicon glyphicon-floppy-disk"></i> Guardar Medico
+				</button>
+			</fieldset>
+		</form>
+	</wicket:extend>
+</body>
+
+</html>

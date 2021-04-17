@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Gestion</title>
+</head>
+<style>
+#contenido {
+	margin: 0 auto;
+	width: 70%;
+	margin-bottom: 100px;
+}
+
+#contenido input[type="text"] {
+	text-align: center;
+}
+</style>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="http://localhost:8090/">Sistema de Gestion</a>
+				</div>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="http://localhost:8090/">Inicio</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Paciente <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" wicket:id="cargar-paciente">Cargar Paciente</a></li>
+							<li><a href="#" wicket:id="listar-paciente">Listar Paciente</a></li>
+						</ul></li>
+  
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Medico <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" wicket:id="cargar-medico">Cargar Medico</a></li>
+							<li><a href="#" wicket:id="listar-medico">Listar Medico</a></li>
+						</ul></li>
+						
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Consultorio <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" wicket:id="cargar-consultorio">Cargar Consultorio</a></li>
+							<li><a href="#" wicket:id="listar-consultorio">Listar Consultorio</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div id="contenido">
+		<wicket:child />
+	</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<wicket:extend>
+		<link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+		<script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		    $('#tabla-pacientes').DataTable({
+		    	"oLanguage": {
+		    		"sProcessing":     "Procesando...",
+		    		"sLengthMenu":     "Mostrar _MENU_ registros",
+		    		"sZeroRecords":    "No se encontraron resultados",
+		    		"sEmptyTable":     "Ningún dato disponible en esta tabla",
+		    		"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+		    		"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+		    		"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+		    		"sInfoPostFix":    "",
+		    		"sSearch":         "Buscar:",
+		    		"sUrl":            "",
+		    		"sInfoThousands":  ",",
+		    		"sLoadingRecords": "Cargando...",
+		    		"oPaginate": {
+		    			"sFirst":    "Primero",
+		    			"sLast":     "Último",
+		    			"sNext":     "Siguiente",
+		    			"sPrevious": "Anterior"
+		    		},
+		    		"fnInfoCallback": null,
+		    		"oAria": {
+		    			"sSortAscending":  ": Activar para ordernar la columna de manera ascendente",
+		    			"sSortDescending": ": Activar para ordernar la columna de manera descendente"
+		    		}
+                }
+		    });
+		});
+		</script>
+		<h3>Lista de Pacientes</h3>
+		<table id="tabla-pacientes" border="4" class="table table-striped table-bordered table-condensed">
+			<thead>
+				<th>Numero Afiliado</th>
+				<th>Obra Social</th>
+				<th>Documento</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th></th>
+			</thead>
+
+			<tbody>
+				<tr wicket:id="tr-lista-pacientes">
+
+					<td><span wicket:id="NumeroAfiliado"></span></td>
+					<td><span wicket:id="ObraSocial"></span></td>
+					<td><span wicket:id="documento"></span></td>
+					<td><span wicket:id="nombre"></span></td>
+					<td><span wicket:id="apellido"></span></td>
+
+					<td><a href="#" wicket:id="editar">Editar</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</wicket:extend>
+</body>
+
+</html>

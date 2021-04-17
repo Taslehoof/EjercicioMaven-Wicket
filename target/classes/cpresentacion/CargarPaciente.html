@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cargar Paciente</title>
+</head>
+<body>
+   <wicket:extend>
+      <form wicket:id="form">
+         <fieldset>
+            <legend><h1>Paciente</h1></legend>
+            <p>
+               Nombre: <input type="text" wicket:id="nombre" required class="form-control"/><br>
+               Apellido: <input type="text" wicket:id="apellido" required class="form-control"/><br> 
+               Documento: <input type="text" wicket:id="documento" required class="form-control"/><br>
+               Numero Afiliado: <input type="text" required wicket:id="numeroAfiliado" class="form-control"/><br>
+               Obra Social: <span wicket:id="ObraSocial" required class="form-control"></span><br>
+            </p>
+            <button class="btn btn-success"><i class="glyphicon glyphicon-floppy-disk"></i>Guardar Paciente</button>
+         </fieldset>
+      </form>
+   </wicket:extend>
+</body>
+</html>
